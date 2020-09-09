@@ -1,0 +1,44 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+// Routers
+import { APP_ROUTING } from './app.routes';
+
+// Servicios
+import { HeroesService } from './servicios/heroes.service';
+
+
+// Componentes
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { compileNgModuleFromRender2 } from '@angular/compiler/src/render3/r3_module_compiler';
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { ComplitComponent } from './components/complit/complit.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
+    HeroesComponent,
+    HeroeComponent,
+    BuscadorComponent,
+    ComplitComponent
+  ],
+  imports: [
+    BrowserModule,
+    APP_ROUTING,
+    FormsModule
+  ],
+  providers: [
+    HeroesService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
